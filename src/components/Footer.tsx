@@ -1,25 +1,26 @@
 import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Line } from "recharts";
 
 const Footer = () => {
   const companyLinks = [
-    { name: "About Us", href: "#about" },
-    { name: "Our Services", href: "#services" },
-    { name: "Career", href: "#career" },
-    { name: "News & Updates", href: "#news" },
+    { name: "About Us", href: "/about" },
+    { name: "Our Services", href: "/services" },
+    { name: "Career", href: "/career" },
+    { name: "News & Updates", href: "/news" },
   ];
 
   const serviceLinks = [
-    { name: "Repair Services", href: "#repair" },
-    { name: "Smart Home", href: "#smart-home" },
-    { name: "Product Orders", href: "#products" },
-    { name: "Online Booking", href: "#booking" },
+    { name: "Repair Services", href: "/repair" },
+    { name: "Smart Home", href: "/smart-home" },
+    { name: "Product Orders", href: "/products" },
+    { name: "Online Booking", href: "/booking" },
   ];
 
   const supportLinks = [
-    { name: "Contact Us", href: "#contact" },
-    { name: "Service Centers", href: "#centers" },
-    { name: "FAQs", href: "#faq" },
-    { name: "Support", href: "#support" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Service Centers", href: "/centers" },
+    { name: "FAQs", href: "/faq" },
+    { name: "Support", href: "/support" },
   ];
 
   return (
@@ -28,8 +29,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="bg-white text-primary px-4 py-2 rounded-md font-bold text-xl mb-6 inline-block">
+            <div className="bg-white text-primary px-4 py-2 rounded-md font-bold text-6xl mb-6 inline-block">
               EDS
+              <div className="text-blue-500 text-sm font-normal mt-1">
+                Beyond Service Generation
+              </div>
             </div>
             <p className="text-blue-100 mb-6 leading-relaxed">
               Leading after-service provider delivering excellence through innovation, 
@@ -86,13 +90,13 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-blue-200" />
-                <span className="text-blue-100">+66 2 123 4567</span>
+                <span className="text-blue-100">+66 2 721 4091-3</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-blue-200 mt-1" />
                 <span className="text-blue-100">
-                  123 Business District<br />
-                  Bangkok, Thailand 10110
+                  66 Soi Anamai, Srinakarin Road, <br />
+                  Suanluang, Bangkok, Thailand 10250
                 </span>
               </li>
             </ul>

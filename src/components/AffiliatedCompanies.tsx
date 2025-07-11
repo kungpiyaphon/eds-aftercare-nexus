@@ -68,7 +68,7 @@ const AffiliatedCompanies = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">Affiliated Companies</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4">Smart Home Services</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A diverse portfolio of specialized companies working together to deliver comprehensive solutions
           </p>

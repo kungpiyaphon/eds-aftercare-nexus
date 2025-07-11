@@ -1,37 +1,153 @@
-import { MapPin, Phone, Clock, Navigation } from "lucide-react";
+import { MapPin, Navigation } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const ServiceCenters = () => {
   const centers = [
     {
-      city: "Bangkok",
-      address: "123 Sukhumvit Road, Bangkok 10110",
-      phone: "+66 2 123 4567",
-      hours: "Mon-Sat: 8:00-18:00",
-      position: { top: "45%", left: "52%" }
+      region: "Bangkok",
+      center: "Head Office",
+      coverage: [
+        "Bangkok", "Nonthaburi", "Pathumthani", "Samutprakan"
+      ],
+      position: { top: "53%", left: "52%" },
     },
     {
-      city: "Chiang Mai",
-      address: "456 Nimman Road, Chiang Mai 50200",
-      phone: "+66 53 234 567",
-      hours: "Mon-Sat: 8:00-17:00",
-      position: { top: "25%", left: "48%" }
+      region: "Northern",
+      center: "Chiangmai",
+      coverage: [
+        "Chiangmai", "Lamphun", "Chiangrai", "Maehongson"
+      ],
+      position: { top: "18%", left: "42%" },
     },
     {
-      city: "Phuket",
-      address: "789 Patong Beach Road, Phuket 83150",
-      phone: "+66 76 345 678",
-      hours: "Mon-Sat: 9:00-18:00",
-      position: { top: "75%", left: "46%" }
+      region: "Northern",
+      center: "Phrae",
+      coverage: [
+        "Phrae", "Phayao", "Nan", "Lampang", "Uttaradit"
+      ],
+      position: { top: "23%", left: "48%" },
     },
     {
-      city: "Pattaya",
-      address: "321 Beach Road, Pattaya 20150",
-      phone: "+66 38 456 789",
-      hours: "Mon-Sat: 8:30-17:30",
-      position: { top: "50%", left: "58%" }
-    }
+      region: "Central",
+      center: "Lopburi",
+      coverage: [
+        "Lopburi", "Singburi", "Angthong", "Saraburi", "Ayutthaya", "Nakhornnayok", "Uthaithani", "Chainat"
+      ],
+      position: { top: "33%", left: "50%" },
+    },
+    {
+      region: "Central",
+      center: "Nakhonsawan",
+      coverage: [
+        "Nakhonsawan", "Phetchabun", "Kamphaengphet", "Tak", "Sukhothai", "Phitsanulok", "Phichit"
+      ],
+      position: { top: "30%", left: "46%" },
+    },
+    {
+      region: "Northeastern",
+      center: "Khonkaen",
+      coverage: [
+        "Khonkaen", "Kalasin", "Mahasarakham", "Mukdahan", "Loei"
+      ],
+      position: { top: "31%", left: "58%" },
+    },
+    {
+      region: "Northeastern",
+      center: "Nakhonratchasima",
+      coverage: [
+        "Nakhonratchasima", "Chaiyaphum", "Buriram", "Prachinburi", "Sakaeo"
+      ],
+      position: { top: "38%", left: "60%" },
+    },
+    {
+      region: "Northeastern",
+      center: "Udonthani",
+      coverage: [
+        "Udonthani", "Nongkhai", "Nongbualamphu", "Nakhonphanom", "Sakonnakhon", "Buengkan"
+      ],
+      position: { top: "24%", left: "62%" },
+    },
+    {
+      region: "Northeastern",
+      center: "Sisaket",
+      coverage: [
+        "Sisaket", "Roi Et", "Surin"
+      ],
+      position: { top: "42%", left: "66%" },
+    },
+    {
+      region: "Northeastern",
+      center: "Ubonratchathani",
+      coverage: [
+        "Ubonratchathani", "Yasothon", "Amnatcharoen"
+      ],
+      position: { top: "46%", left: "68%" },
+    },
+    {
+      region: "Western",
+      center: "Ratchaburi",
+      coverage: [
+        "Ratchaburi", "Phetchaburi", "Nakhornpathom", "Samutsakhon", "Samutsongkhram", "Suphanburi", "Kanchanaburi"
+      ],
+      position: { top: "50%", left: "45%" },
+    },
+    {
+      region: "Eastern",
+      center: "Chonburi",
+      coverage: [
+        "Chonburi", "Chachoengsao"
+      ],
+      position: { top: "47%", left: "58%" },
+    },
+    {
+      region: "Eastern",
+      center: "Rayong",
+      coverage: [
+        "Rayong", "Chanthaburi", "Trat"
+      ],
+      position: { top: "50%", left: "62%" },
+    },
+    {
+      region: "Southern",
+      center: "Chumphon",
+      coverage: [
+        "Chumphon", "Ranong", "Prachuapkhirikhan"
+      ],
+      position: { top: "68%", left: "48%" },
+    },
+    {
+      region: "Southern",
+      center: "Nakhonsithammarat",
+      coverage: [
+        "Nakhonsithammarat", "Suratthani"
+      ],
+      position: { top: "76%", left: "55%" },
+    },
+    {
+      region: "Southern",
+      center: "Phuket",
+      coverage: [
+        "Phuket", "Krabi", "Phangnga"
+      ],
+      position: { top: "80%", left: "47%" },
+    },
+    {
+      region: "Southern",
+      center: "Songkhla",
+      coverage: [
+        "Songkhla", "Phatthalung", "Trang", "Satun"
+      ],
+      position: { top: "84%", left: "59%" },
+    },
+    {
+      region: "Southern",
+      center: "Yala",
+      coverage: [
+        "Yala", "Pattani", "Narathiwat"
+      ],
+      position: { top: "90%", left: "60%" },
+    },
   ];
 
   return (
@@ -44,9 +160,9 @@ const ServiceCenters = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Thailand Map */}
-          <div className="relative">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+          {/* Thailand Map - 3/5 width */}
+          <div className="lg:col-span-3">
             <div className="bg-gradient-subtle rounded-2xl p-8 shadow-card">
               <div className="relative bg-primary/10 rounded-xl p-8 h-96">
                 {/* Simplified Thailand map outline */}
@@ -62,7 +178,7 @@ const ServiceCenters = () => {
                         <div className="relative">
                           <div className="w-6 h-6 bg-accent rounded-full border-2 border-white shadow-md animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
                           <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            {center.city}
+                            {center.center}
                           </div>
                         </div>
                       </div>
@@ -70,37 +186,33 @@ const ServiceCenters = () => {
                   </div>
                 </div>
                 <div className="absolute bottom-2 right-2 text-xs text-muted-foreground">
-                  Thailand Service Network
+                  On-Site Services Nationwide
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Service Centers List */}
-          <div className="space-y-6">
+          {/* Service Centers List - 2/5 width */}
+          <div className="lg:col-span-2 space-y-6">
             {centers.map((center, index) => (
               <Card key={index} className="hover:shadow-elegant transition-all duration-300">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-accent" />
-                    {center.city} Service Center
+                    {center.center} Service Center
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Navigation className="h-4 w-4 text-muted-foreground mt-1" />
-                    <span className="text-sm">{center.address}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Phone className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">{center.phone}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Clock className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">{center.hours}</span>
+                  <div className="grid grid-cols-2">
+                    {center.coverage.map((province, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <Navigation className="h-4 w-4 text-muted-foreground mt-1" />
+                        <span className="text-sm">{province}</span>
+                      </div>
+                    ))}
                   </div>
                   <Button variant="outline" size="sm" className="mt-4">
-                    Get Directions
+                    Get Details
                   </Button>
                 </CardContent>
               </Card>

@@ -1,14 +1,7 @@
 import { Building2, Handshake, Award, Globe } from "lucide-react";
+import BrandCarouselSection from "./BrandCarouselSection";
 
 const PartnersSection = () => {
-  const partners = [
-    { name: "TechCorp", logo: "TC" },
-    { name: "InnovaSys", logo: "IS" },
-    { name: "GlobalTech", logo: "GT" },
-    { name: "SmartSolutions", logo: "SS" },
-    { name: "FutureTech", logo: "FT" },
-    { name: "NextGen", logo: "NG" }
-  ];
 
   const stats = [
     {
@@ -36,25 +29,16 @@ const PartnersSection = () => {
   return (
     <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">Our Partners</h2>
+        <div className="text-center mb-2">
+          <h2 className="text-4xl font-bold text-primary mb-4">Authorized Service Provider</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Collaborating with industry leaders to deliver exceptional service solutions worldwide
           </p>
         </div>
 
-        {/* Partner Logos */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-lg p-6 flex items-center justify-center hover:shadow-card transition-all duration-300 group hover:-translate-y-1"
-            >
-              <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-primary-foreground font-bold text-lg">{partner.logo}</span>
-              </div>
-            </div>
-          ))}
+        {/* Partner Logos Carousel */}
+        <div className="relative overflow-hidden">
+            <BrandCarouselSection />
         </div>
 
         {/* Stats */}

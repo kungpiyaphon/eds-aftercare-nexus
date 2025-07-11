@@ -4,11 +4,9 @@ import CoreStrengths from "@/components/CoreStrengths";
 import ServiceBoxes from "@/components/ServiceBoxes";
 import ProductsServices from "@/components/ProductsServices";
 import PartnersSection from "@/components/PartnersSection";
-import AffiliatedCompanies from "@/components/AffiliatedCompanies";
-import SmartHomeService from "@/components/SmartHomeService";
-import ServiceCenters from "@/components/ServiceCenters";
 import NewsUpdates from "@/components/NewsUpdates";
 import Footer from "@/components/Footer";
+import SamsungHighlightSection from "@/components/SamsungHighlightSection";
 
 const Index = () => {
   return (
@@ -27,17 +25,17 @@ const Index = () => {
         {/* Section 4: Products & Services */}
         <ProductsServices />
         
-        {/* Section 5: Partners */}
+        {/* Section 5: Samsung Highlight */}
+        <SamsungHighlightSection />
+        
+        {/* Section 6: Partners */}
         <PartnersSection />
         
-        {/* Section 6: Affiliated Companies */}
-        <AffiliatedCompanies />
-        
         {/* Section 7: Smart Home Service */}
-        <SmartHomeService />
+        {/* <SmartHomeService /> */}
         
         {/* Section 8: Service Centers */}
-        <ServiceCenters />
+        {/* <ServiceCenters /> */}
         
         {/* Section 9: News & Updates */}
         <NewsUpdates />

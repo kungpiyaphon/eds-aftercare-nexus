@@ -6,7 +6,7 @@ const ServiceBoxes = () => {
   const services = [
     {
       icon: Wrench,
-      title: "Repair Details",
+      title: "Check Status Repair",
       description: "Comprehensive repair services with detailed diagnostics and transparent reporting",
       color: "bg-blue-50 text-blue-600",
       buttonText: "View Details"
