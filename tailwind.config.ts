@@ -108,12 +108,25 @@ export default {
 					}
 				},
 				'slide-left': {
-					from: {transform: 'translateX(0%)'},
-					to: {transform: 'translateX(-50%)'},
+					from: { transform: 'translateX(0%)' },
+					to: { transform: 'translateX(-50%)' },
 				},
 				'slide-right': {
-					from: {transform: 'translateX(0%)'},
-					to: {transform: 'translateX(50%)'},
+					from: { transform: 'translateX(0%)' },
+					to: { transform: 'translateX(50%)' },
+				},
+				'truck-in': {
+					'0%': { left: '-60px', opacity: '0' },
+					'30%': { left: '40%', opacity: '1' },
+					'100%': { left: '44%', opacity: '1' },
+				},
+				'fade-in-warehouse': {
+					'0%': { opacity: '0', transform: 'translate(-50%, -50%) scale(0.9)' },
+					'100%': { opacity: '1', transform: 'translate(-50%, -50%) scale(1)' },
+				},
+				'truck-out': {
+					'0%': { left: '56%', opacity: '1' }, //เริ่มตรงกลาง (จุดจบ truck-in)
+					'100%': { left: '110%', opacity: '0' }, //ออกจากขวาสุด
 				},
 			},
 			animation: {
@@ -122,6 +135,9 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-left': 'slide-left 40s linear infinite',
 				'slide-right': 'slide-right 40s linear infinite',
+				'truck-in': 'truck-in 2s ease-out forwards',
+				'fade-in-warehouse': 'fade-in-warehouse 0.8s ease-out forwards',
+				'truck-out': 'truck-out 2s ease-in forwards',
 			}
 		}
 	},

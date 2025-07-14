@@ -7,6 +7,7 @@ import PartnersSection from "@/components/PartnersSection";
 import NewsUpdates from "@/components/NewsUpdates";
 import Footer from "@/components/Footer";
 import SamsungHighlightSection from "@/components/SamsungHighlightSection";
+import SmartHomeBanner from "@/components/SmartHomeBanner";
 
 const Index = () => {
   return (
@@ -32,7 +33,7 @@ const Index = () => {
         <PartnersSection />
         
         {/* Section 7: Smart Home Service */}
-        {/* <SmartHomeService /> */}
+        <SmartHomeBanner />
         
         {/* Section 8: Service Centers */}
         {/* <ServiceCenters /> */}
