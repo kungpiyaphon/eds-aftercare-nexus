@@ -1,8 +1,10 @@
-import { MapPin, Navigation } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { MapPin, Navigation, X } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const ServiceCenters = () => {
+  const [selectedCenter, setSelectedCenter] = useState(null);
   const centers = [
     {
       region: "Bangkok",
@@ -155,71 +157,75 @@ const ServiceCenters = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">Service Centers</h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Find our service centers across Thailand for convenient support
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-          {/* Thailand Map - 3/5 width */}
-          <div className="lg:col-span-3">
-            <div className="bg-gradient-subtle rounded-2xl p-8 shadow-card">
-              <div className="relative bg-primary/10 rounded-xl p-8 h-96">
-                {/* Simplified Thailand map outline */}
-                <div className="absolute inset-4 border-2 border-primary/30 rounded-lg">
-                  <div className="w-full h-full relative">
-                    {/* Service center pins */}
-                    {centers.map((center, index) => (
-                      <div
-                        key={index}
-                        className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
-                        style={{ top: center.position.top, left: center.position.left }}
-                      >
-                        <div className="relative">
-                          <div className="w-6 h-6 bg-accent rounded-full border-2 border-white shadow-md animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
-                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            {center.center}
-                          </div>
-                        </div>
+        {/* Full-width map area */}
+        <div className="relative bg-gradient-subtle rounded-2xl p-8 shadow-card mb-16">
+          <div className="relative bg-primary/10 rounded-xl h-[500px] overflow-hidden">
+            <div className="absolute inset-4 border-2 border-primary/30 rounded-lg">
+              <div className="w-full h-full relative">
+                {centers.map((center, index) => (
+                  <div
+                    key={index}
+                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
+                    style={{ top: center.position.top, left: center.position.left }}
+                    onClick={() => setSelectedCenter(index)}
+                  >
+                    <div className="relative">
+                      <div className="w-6 h-6 bg-accent rounded-full border-2 border-white shadow-md animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {center.center}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </div>
-                <div className="absolute bottom-2 right-2 text-xs text-muted-foreground">
-                  On-Site Services Nationwide
-                </div>
+                ))}
               </div>
+            </div>
+            <div className="absolute bottom-2 right-2 text-xs text-muted-foreground">
+              On-Site Services Nationwide
             </div>
           </div>
 
-          {/* Service Centers List - 2/5 width */}
-          <div className="lg:col-span-2 space-y-6">
-            {centers.map((center, index) => (
-              <Card key={index} className="hover:shadow-elegant transition-all duration-300">
+          {/* Overlay card on pin click */}
+          {selectedCenter !== null && (
+            <div className="absolute inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-10">
+              <Card className="w-full max-w-md z-20 relative">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="absolute top-2 right-2 text-muted-foreground"
+                  onClick={() => setSelectedCenter(null)}
+                >
+                  <X className="w-5 h-5" />
+                </Button>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-accent" />
-                    {center.center} Service Center
+                    {centers[selectedCenter].center} Service Center
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-2">
-                    {center.coverage.map((province, i) => (
+                    {centers[selectedCenter].coverage.map((province, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <Navigation className="h-4 w-4 text-muted-foreground mt-1" />
                         <span className="text-sm">{province}</span>
                       </div>
                     ))}
                   </div>
-                  <Button variant="outline" size="sm" className="mt-4">
+                  <Button variant="outline" size="sm">
                     Get Details
                   </Button>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            </div>
+          )}
         </div>
 
+        {/* Bottom CTA */}
         <div className="text-center mt-12">
           <div className="bg-primary/5 rounded-2xl p-8">
             <h3 className="text-2xl font-semibold text-primary mb-4">
