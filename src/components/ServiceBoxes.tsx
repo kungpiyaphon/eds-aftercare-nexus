@@ -1,36 +1,43 @@
 import { Wrench, Cog, ShoppingCart, Calendar } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom"
 
 const ServiceBoxes = () => {
+  const navigate = useNavigate();
+
   const services = [
     {
       icon: Wrench,
       title: "Check Status Repair",
       description: "Comprehensive repair services with detailed diagnostics and transparent reporting",
       color: "bg-blue-50 text-blue-600",
-      buttonText: "View Details"
+      buttonText: "View Details",
+      action: () => navigate("/contact"),
     },
     {
       icon: Cog,
       title: "Our Services",
       description: "Complete range of after-service solutions tailored to your specific needs",
       color: "bg-green-50 text-green-600",
-      buttonText: "Explore Services"
+      buttonText: "Explore Services",
+      action: () => navigate("/services"),
     },
     {
       icon: ShoppingCart,
       title: "Order Products",
       description: "High-quality replacement parts and accessories with fast delivery options",
       color: "bg-purple-50 text-purple-600",
-      buttonText: "Shop Now"
+      buttonText: "Shop Now",
+      externalLink: "https://external-shop.example.com",
     },
     {
       icon: Calendar,
       title: "Online Booking",
       description: "Schedule your service appointment online with flexible time slots available",
       color: "bg-orange-50 text-orange-600",
-      buttonText: "Book Now"
+      buttonText: "Book Now",
+      action: () => navigate("/contact"),
     }
   ];
 
@@ -48,9 +55,14 @@ const ServiceBoxes = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+              <Card
+                key={index}
+                className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1"
+              >
                 <CardHeader className="text-center">
-                  <div className={`w-16 h-16 rounded-full ${service.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-16 h-16 rounded-full ${service.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <Icon className="h-8 w-8" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -59,9 +71,28 @@ const ServiceBoxes = () => {
                   <CardDescription className="mb-6 leading-relaxed">
                     {service.description}
                   </CardDescription>
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    {service.buttonText}
-                  </Button>
+                  {service.externalLink ? (
+                    <a
+                      href={service.externalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        variant="outline"
+                        className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300"
+                      >
+                        {service.buttonText}
+                      </Button>
+                    </a>
+                  ) : (
+                    <Button
+                      onClick={service.action}
+                      variant="outline"
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300"
+                    >
+                      {service.buttonText}
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             );
