@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import SmartHome from "./pages/SmartHome";
 import BrandCarouselSection from "./components/BrandCarouselSection";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
