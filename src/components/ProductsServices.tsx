@@ -1,8 +1,10 @@
 import { Monitor, Smartphone, Laptop, Printer, HardDrive, Cpu } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom"
 
 const ProductsServices = () => {
+  const navigate = useNavigate();
   const products = [
     {
       icon: Monitor,
@@ -75,9 +77,6 @@ const ProductsServices = () => {
                       </div>
                     ))}
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    Learn More
-                  </Button>
                 </CardContent>
               </Card>
             );
@@ -85,7 +84,9 @@ const ProductsServices = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" className="bg-gradient-primary">
+          <Button size="lg" className="bg-gradient-primary"
+            onClick={() => navigate("/services")}
+          >
             View All Services
           </Button>
         </div>
