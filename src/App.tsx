@@ -9,6 +9,7 @@ import SmartHome from "./pages/SmartHome";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import OurServices from "./pages/OurServices";
+import Career from "./pages/Career";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/smart-home" element={<SmartHome />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<OurServices />} />
+          <Route path="/career" element={<Career />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
