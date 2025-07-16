@@ -131,7 +131,7 @@ const Career = () => {
                                 key={index}
                                 className="border border-border rounded-lg mb-6 overflow-hidden"
                             >
-                                <button
+                                <Button
                                     className="w-full flex justify-between items-center px-6 py-4 bg-accent hover:bg-accent/70 transition-colors"
                                     onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                                 >
@@ -143,7 +143,7 @@ const Career = () => {
                                             "rotate-180": activeIndex === index
                                         })}
                                     />
-                                </button>
+                                </Button>
                                 {activeIndex === index && (
                                     <div className="p-6 space-y-6 bg-background">
                                         <div>
