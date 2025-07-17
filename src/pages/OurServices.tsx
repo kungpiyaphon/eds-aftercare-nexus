@@ -117,7 +117,7 @@ const OurServices = () => {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <Header />
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -165,7 +165,7 @@ const OurServices = () => {
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   );
 };
 
