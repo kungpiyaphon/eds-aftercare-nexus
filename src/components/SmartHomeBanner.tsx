@@ -35,21 +35,17 @@ const SmartHomeBanner = () => {
                         {/* Truck moving in */}
                         <Truck className="absolute left-[-60px] top-1/2 transform -translate-y-1/2 text-white w-10 h-10 animate-truck-in" />
 
-                        {/* Logo above warehouse */}
-                        <div className="bg-white rounded-lg p-1 inline-block shadow-md">
+                        {/* Prominent SmartHome Logo */}
+                        <div className="relative z-10 bg-white rounded-xl p-4 inline-block shadow-2xl">
                             <img
                                 src="/logos/smarthome-logo.png"
                                 alt="SmartHome Logo"
-                                className="w-16 mx-auto"
+                                className="w-28 md:w-36 mx-auto"
                             />
                         </div>
 
-
-                        {/* Warehouse */}
-                        <Warehouse className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white w-12 h-12 animate-fade-in-warehouse delay-[1.8s]" />
-
                         {/* Truck moving out */}
-                        <Truck className="absolute left-[56%] top-1/2 transform -translate-y-1/2 text-white w-10 h-10 animate-truck-out delay-[3s]" />
+                        <Truck className="absolute left-[60%] top-1/2 transform -translate-y-1/2 text-white w-10 h-10 animate-truck-out delay-[3s]" />
                     </div>
 
                     {/* Text CTA */}
@@ -57,7 +53,7 @@ const SmartHomeBanner = () => {
                         Explore SmartHome Solutions
                     </h3>
                     <Button
-                        size="lg"
+                        size="sm"
                         variant="secondary"
                         className="rounded-full"
                         onClick={() => navigate("/smart-home")}

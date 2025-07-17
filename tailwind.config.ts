@@ -117,15 +117,15 @@ export default {
 				},
 				'truck-in': {
 					'0%': { left: '-60px', opacity: '0' },
-					'30%': { left: '40%', opacity: '1' },
-					'100%': { left: '44%', opacity: '1' },
+					'30%': { left: '30%', opacity: '1' },
+					'100%': { left: '40%', opacity: '1' },
 				},
 				'fade-in-warehouse': {
 					'0%': { opacity: '0', transform: 'translate(-50%, -50%) scale(0.9)' },
 					'100%': { opacity: '1', transform: 'translate(-50%, -50%) scale(1)' },
 				},
 				'truck-out': {
-					'0%': { left: '56%', opacity: '1' }, //เริ่มตรงกลาง (จุดจบ truck-in)
+					'0%': { left: '60%', opacity: '1' }, //เริ่มตรงกลาง (จุดจบ truck-in)
 					'100%': { left: '110%', opacity: '0' }, //ออกจากขวาสุด
 				},
 			},
