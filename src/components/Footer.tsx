@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { Line } from "recharts";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const companyLinks = [
@@ -10,9 +11,9 @@ const Footer = () => {
   ];
 
   const serviceLinks = [
-    { name: "Repair Services", href: "/repair" },
+    { name: "Repair Services", href: "/contact" },
     { name: "Smart Home", href: "/smart-home" },
-    { name: "Product Orders", href: "/products" },
+    { name: "Product Orders", href: "https://www.facebook.com/ElectronicsDataSource" },
     { name: "Online Booking", href: "/booking" },
   ];
 
@@ -30,17 +31,16 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="bg-white text-primary px-4 py-2 rounded-md font-bold text-6xl mb-6 inline-block">
-              EDS
-              <div className="text-blue-500 text-sm font-normal mt-1">
-                Beyond Service Generation
-              </div>
+              <Link to="/" className="flex items-center gap-2">
+                <img src="/logo.png" alt="EDS Logo" className="h-20 w-auto" />
+              </Link>
             </div>
             <p className="text-blue-100 mb-6 leading-relaxed">
-              Leading after-service provider delivering excellence through innovation, 
+              Leading after-service provider delivering excellence through innovation,
               expertise, and customer-focused solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-blue-200 hover:text-white transition-colors">
+              <a href="https://m.me/ElectronicsDataSource" className="text-blue-200 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="#" className="text-blue-200 hover:text-white transition-colors">
