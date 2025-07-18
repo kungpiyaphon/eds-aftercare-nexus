@@ -6,6 +6,14 @@ import { MapPin, Phone, Navigation, MessageCircle } from "lucide-react";
 
 const samsungBranches = [
   {
+    name: "Electronics Data Source & Supply (Head Office)",
+    type: "SmartHome Electronics (Head Office)",
+    address: "66 Soi Ananmai 39, 24 Srinagarindra Rd, Suan Luang, Bangkok 10250",
+    // phone: "+66 2 345 6780",
+    lineUrl: "https://lin.ee/LRZBpYn",
+    mapUrl: "https://maps.app.goo.gl/MMQfJNNaTiBmnK5K9"
+  },
+  {
     name: "Samsung MBK Center",
     type: "Mobile Service",
     address: "MBK Shopping Center, Room No. 2S-F5 F6, 5th Floor, No. 444, Phaya Thai Rd, Pathum Wan, Bangkok 10330",
@@ -39,7 +47,7 @@ const samsungBranches = [
   },
   {
     name: "Samsung Rayong",
-    type: "Appliance Service",
+    type: "Mobile & Appliance Service",
     address: "The Design Village 18/49, Mueang Rayong District, Rayong 21000",
     // phone: "+66 38 123 456",
     lineUrl: "https://lin.ee/CuMPhur",
@@ -47,7 +55,7 @@ const samsungBranches = [
   },
   {
     name: "Samsung Ayutthaya",
-    type: "Appliance Service",
+    type: "Moblie & Appliance Service",
     address: "235, Moo 5 Rotchana Rd, Tambon Phai Ling, Phra Nakhon Si Ayutthaya District, Phra Nakhon Si Ayutthaya 13000",
     // phone: "+66 35 234 567",
     lineUrl: "https://lin.ee/ZPvdYqvu",
@@ -62,16 +70,8 @@ const samsungBranches = [
     mapUrl: "https://maps.app.goo.gl/H5m8jxdY8m82BbNt8"
   },
   {
-    name: "Smart Home Electronics",
-    type: "Printer & Other",
-    address: "66 Soi Ananmai 39, 24 Srinagarindra Rd, Suan Luang, Bangkok 10250",
-    // phone: "+66 2 345 6780",
-    lineUrl: "https://lin.ee/LRZBpYn",
-    mapUrl: "https://maps.app.goo.gl/MMQfJNNaTiBmnK5K9"
-  },
-  {
-    name: "Smart Home Electronics",
-    type: "Xiaomi",
+    name: "Xiaomi Authorized Service Center",
+    type: "Mobile & Multi Product Service",
     address: "163/44 Moo 3, Phra Nakhon Si Ayutthaya District, Phra Nakhon Si Ayutthaya 13000",
     // phone: "+66 2 345 6780",
     lineUrl: "https://lin.ee/LRZBpYn",

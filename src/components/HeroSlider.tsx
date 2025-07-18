@@ -9,21 +9,21 @@ const slides = [
   {
     id: 1,
     image: heroExecutives,
-    title: "Excellence & Recognition",
-    subtitle: "Leading executives and award-winning service excellence",
+    title: "EDS BEYOND SERVICE GENERATION",
+    subtitle: "To become a leading provider of integrated services in Thailand and Asia Regions",
     description: "Our leadership team drives innovation and maintains the highest standards in after-service solutions."
   },
   {
     id: 2,
     image: heroVision,
-    title: "Vision, Culture & Values",
+    title: "VISION, CULTURE & VALUES",
     subtitle: "Building tomorrow's service standards today",
     description: "Our vision shapes every interaction, our culture empowers every team member, and our values guide every decision."
   },
   {
     id: 3,
     image: heroAiInnovation,
-    title: "AI-Powered Innovation",
+    title: "AI-POWERED INNOVATION",
     subtitle: "Revolutionary AI assistance for precise malfunction analysis",
     description: "Cutting-edge artificial intelligence empowers our technicians to diagnose and resolve issues with unprecedented accuracy and speed."
   }
