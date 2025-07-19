@@ -1,4 +1,4 @@
-name: Deploy to Plesk via FTP
+name: build-and-deploy
 
 on:
   push:
@@ -6,29 +6,24 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+      - name: Install dependencies and build
+        run: |
+          npm ci
+          npm run build
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
-
-      - name: Deploy to FTP Server
+      - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
-          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          protocol: ftp
+          local-dir: ./dist
+          server-dir: /it.eds.co.th/
