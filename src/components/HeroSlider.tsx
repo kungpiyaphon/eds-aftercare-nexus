@@ -78,7 +78,7 @@ const HeroSlider = () => {
                 <Button size="lg" className="bg-accent hover:bg-accent/90">
                   Learn More
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-primary">
                   Our Services
                 </Button>
               </div>
