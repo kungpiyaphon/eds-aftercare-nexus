@@ -3,7 +3,7 @@ name: Deploy to Plesk via FTP
 on:
   push:
     branches:
-      - main  # หรือเปลี่ยนตาม branch ที่คุณใช้
+      - main
 
 jobs:
   build-and-deploy:
