@@ -25,5 +25,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
-          local-dir: ./dist
+          local-dir: ./dist/
           server-dir: /it.eds.co.th/
