@@ -20,24 +20,42 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="w-full bg-white py-20 px-4 md:px-16 flex flex-col md:flex-row items-center gap-10">
+    <section className="w-full bg-white py-20 px-4 md:px-16 flex flex-col md:flex-row items-stretch gap-10">
       {/* Left: Text content */}
-      <div className="w-full md:w-1/2 space-y-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#13255B]">
-          EDS Electronics Data Source & Supply Limited
-        </h2>
-        <p className="text-xl font-medium text-gray-600">
-          We are one of the largest Warehousing and After-sales service providers in Thailand.
-        </p>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>Working with multiple worldwide brands in consumer electronics, telecom, and IT products</li>
-          <li>Providing high-standard facilities and services</li>
-          <li>Expertise in reverse logistics and warranty management</li>
-        </ul>
+      <div className="w-full md:w-1/2 flex flex-col justify-between gap-6">
+        <div className="space-y-6">
+          <h2 className="text-3xl pt-10 md:text-4xl font-bold text-[#13255B]">
+            EDS Electronics Data Source & Supply Limited
+          </h2>
+          <p className="text-xl font-medium text-gray-600">
+            We are one of the largest Warehousing and After-sales service providers in Thailand.
+          </p>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Working with multiple worldwide brands in consumer electronics, telecom, and IT products</li>
+            <li>Providing high-standard facilities and services</li>
+            <li>Expertise in reverse logistics and warranty management</li>
+          </ul>
+        </div>
+
+        {/* Stats Box (not overlay anymore) */}
+        <div className="mt-8 self-end bg-[#13255B] text-white rounded-xl shadow-lg p-5 flex gap-6 w-fit">
+          <div className="text-center">
+            <p className="text-sm">Established</p>
+            <p className="text-2xl font-bold">
+              <CountUp end={1996} duration={2} separator='' />
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-sm">Employees</p>
+            <p className="text-2xl font-bold">
+              <CountUp end={350} duration={2.5} />
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Right: Image carousel + stats */}
-      <div className="w-full md:w-1/2 relative">
+      {/* Right: Image carousel */}
+      <div className="w-full md:w-1/2">
         <Slider {...settings}>
           {images.map((img, index) => (
             <div key={index}>
@@ -49,22 +67,6 @@ const AboutSection = () => {
             </div>
           ))}
         </Slider>
-
-        {/* Stats overlay */}
-        <div className="absolute bottom-4 left-4 md:left-8 bg-white bg-opacity-90 rounded-xl shadow-md p-4 flex gap-6">
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Established</p>
-            <p className="text-2xl font-bold text-[#13255B]">
-              <CountUp end={1996} duration={2} separator='' />
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Employees</p>
-            <p className="text-2xl font-bold text-[#13255B]">
-              <CountUp end={350} duration={2.5} />
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
