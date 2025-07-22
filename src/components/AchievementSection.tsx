@@ -19,7 +19,7 @@ const tags: Tag[] = [
 ];
 
 export default function AchievementSection() {
-  const [hoveredTag, setHoveredTag] = useState<string | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section className="py-16 bg-white">
@@ -30,26 +30,25 @@ export default function AchievementSection() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {tags.map((tag) => (
-            <div
-              key={tag.label}
-              onMouseEnter={() => setHoveredTag(tag.label)}
-              onMouseLeave={() => setHoveredTag(null)}
-              className="relative"
-            >
-              <Card className="cursor-default hover:bg-[#13255B] hover:text-white transition-all duration-300">
-                <CardContent className="p-6">
-                  <p className="font-semibold text-lg">{tag.label}</p>
+          {tags.map((tag, index) => {
+            const isHovered = hoveredIndex === index;
+            return (
+              <Card
+                key={tag.label}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className={`cursor-default transition-all duration-300 ${
+                  isHovered ? "bg-[#13255B] text-white" : "bg-white text-[#13255B]"
+                }`}
+              >
+                <CardContent className="p-6 min-h-[100px] flex items-center justify-center text-center">
+                  <p className="font-medium text-sm sm:text-base">
+                    {isHovered ? tag.detail : tag.label}
+                  </p>
                 </CardContent>
               </Card>
-
-              {hoveredTag === tag.label && (
-                <div className="absolute top-full left-0 mt-2 w-full z-10 bg-white border border-gray-200 shadow-lg rounded-lg text-sm p-4 text-gray-800">
-                  {tag.detail}
-                </div>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
