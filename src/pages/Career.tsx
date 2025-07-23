@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Contact } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/Footer";
@@ -8,6 +8,7 @@ import CareerHeroBanner from "@/components/career/CareerHeroBanner";
 import LeaveBenefitsSection from "@/components/career/LeaveBenefitsSection";
 import GrowWithUs from "@/components/career/GrowWithUs";
 import JobAccordionList from "@/components/career/JobAccordionList";
+import ContactHR from "@/components/career/ContactHR";
 
 const jobPositions = [
     {
@@ -109,11 +110,12 @@ const Career = () => {
     return (
         <div className="min-h-screen bg-background">
             <Header />
-            <section className="py-20 bg-background">
+            <section className="bg-background py-20">
             <CareerHeroBanner />
             <LeaveBenefitsSection />
             <GrowWithUs />
             <JobAccordionList />
+            <ContactHR />
             </section>
             <Footer />
         </div>

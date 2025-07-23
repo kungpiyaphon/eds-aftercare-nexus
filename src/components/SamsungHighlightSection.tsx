@@ -7,7 +7,7 @@ const SamsungHighlightSection = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-primary mb-4">
-            Authorized Samsung Service Centers
+            Samsung Exclusive Service Centers
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             We provide mobile and appliance services through official Samsung-authorized centers across 7 provinces in Thailand.

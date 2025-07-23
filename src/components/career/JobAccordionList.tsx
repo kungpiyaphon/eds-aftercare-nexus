@@ -80,9 +80,9 @@ export default function JobAccordionList() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-3xl font-bold text-primary mb-10 text-center">
+    <section className="bg-background py-10">
+      <div className="container mx-auto rounded-xl px-4 py-10 max-w-4xl bg-gradient-to-r from-[#13255B] via-[#3E4E85] to-[#9CB2E0] text-white">
+        <h2 className="text-3xl font-bold text-white mb-10 text-center">
           Job Positions Available
         </h2>
 
