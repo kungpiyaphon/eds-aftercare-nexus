@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import CareerHeroBanner from "@/components/CareerHeroBanner";
-import LeaveBenefitsSection from "@/components/LeaveBenefitsSection";
-import GrowWithUs from "@/components/GrowWithUs";
+import CareerHeroBanner from "@/components/career/CareerHeroBanner";
+import LeaveBenefitsSection from "@/components/career/LeaveBenefitsSection";
+import GrowWithUs from "@/components/career/GrowWithUs";
+import JobAccordionList from "@/components/career/JobAccordionList";
 
 const jobPositions = [
     {
@@ -112,7 +113,7 @@ const Career = () => {
             <CareerHeroBanner />
             <LeaveBenefitsSection />
             <GrowWithUs />
-            
+            <JobAccordionList />
             </section>
             <Footer />
         </div>
