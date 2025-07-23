@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import CareerHeroBanner from "@/components/CareerHeroBanner";
+import LeaveBenefitsSection from "@/components/LeaveBenefitsSection";
 
 const jobPositions = [
     {
@@ -108,6 +109,7 @@ const Career = () => {
             <Header />
             <section className="py-20 bg-background">
             <CareerHeroBanner />
+            <LeaveBenefitsSection />
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-primary mb-4">Grow With Us</h2>
