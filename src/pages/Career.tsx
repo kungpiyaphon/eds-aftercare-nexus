@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import CareerHeroBanner from "@/components/CareerHeroBanner";
 import LeaveBenefitsSection from "@/components/LeaveBenefitsSection";
+import GrowWithUs from "@/components/GrowWithUs";
 
 const jobPositions = [
     {
@@ -110,77 +111,8 @@ const Career = () => {
             <section className="py-20 bg-background">
             <CareerHeroBanner />
             <LeaveBenefitsSection />
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-primary mb-4">Grow With Us</h2>
-                        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                            We promise:
-                        </p>
-                        <ul className="mt-6 space-y-2 text-lg text-muted-foreground">
-                            <li>1. Long term growth</li>
-                            <li>2. Great career opportunities</li>
-                            <li>3. Overall development of Leadership</li>
-                            <li>4. Multi brand experience</li>
-                            <li>5. Financial stability</li>
-                        </ul>
-                    </div>
-
-                    <div className="max-w-3xl mx-auto">
-                        <h3 className="text-3xl font-semibold text-primary mb-6 text-center">
-                            Job Positions Online
-                        </h3>
-
-                        {jobPositions.map((job, index) => (
-                            <div
-                                key={index}
-                                className="border border-border rounded-lg mb-6 overflow-hidden"
-                            >
-                                <Button
-                                    className="w-full flex justify-between items-center px-6 py-4 bg-accent hover:bg-accent/70 transition-colors"
-                                    onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                                >
-                                    <span className="text-lg font-medium text-left">
-                                        {job.title}
-                                    </span>
-                                    <ChevronDown
-                                        className={cn("h-5 w-5 transition-transform", {
-                                            "rotate-180": activeIndex === index
-                                        })}
-                                    />
-                                </Button>
-                                {activeIndex === index && (
-                                    <div className="p-6 space-y-6 bg-background">
-                                        <div>
-                                            <h4 className="text-lg font-semibold mb-2 text-primary">Qualification</h4>
-                                            <ul className="list-disc pl-6 space-y-1 text-muted-foreground">
-                                                {job.qualification.map((q, i) => (
-                                                    <li key={i}>{q}</li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h4 className="text-lg font-semibold mb-2 text-primary">Job Details / Responsibility Role</h4>
-                                            <ul className="list-disc pl-6 space-y-1 text-muted-foreground">
-                                                {job.responsibility.map((r, i) => (
-                                                    <li key={i}>{r}</li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                        <p className="text-sm text-muted-foreground">
-                                            <strong>Experience:</strong> {job.experience}
-                                        </p>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="text-center mt-12">
-                        <h4 className="text-xl text-primary font-semibold mb-2">If you are the one... If you have the hunger... If you want a long-term family bonding with EDS</h4>
-                        <p className="text-muted-foreground mb-4">Then contact HR</p>
-                        <p className="text-lg font-medium text-primary">Email: hr.recruit@eds.co.th</p>
-                    </div>
-                </div>
+            <GrowWithUs />
+            
             </section>
             <Footer />
         </div>
