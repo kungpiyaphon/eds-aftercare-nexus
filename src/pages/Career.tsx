@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import CareerHeroBanner from "@/components/CareerHeroBanner";
 
 const jobPositions = [
     {
@@ -106,6 +107,7 @@ const Career = () => {
         <div className="min-h-screen bg-background">
             <Header />
             <section className="py-20 bg-background">
+            <CareerHeroBanner />
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-primary mb-4">Grow With Us</h2>
