@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Navigation, MessageCircle } from "lucide-react";
+import HeadOfficeSection from "@/components/contact/HeadOfficeSection";
 
 const samsungBranches = [
   {
@@ -92,57 +93,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-primary mb-4">Samsung Authorized Service Centers</h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Explore our official Samsung service locations nationwide – both for mobile devices and appliances.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {samsungBranches.map((branch, index) => (
-              <Card key={index} className="hover:shadow-elegant transition-all duration-300 overflow-hidden">
-                {/* Branch Image */}
-                <img
-                  src={`/images/branches/${branch.img}.jpg`} // ตัวอย่าง path: public/images/branches/1.jpg
-                  alt={`Photo of ${branch.name}`}
-                  className="w-full h-48 object-cover rounded-t-lg"
-                />
-
-                <CardHeader>
-                  <CardTitle className="text-lg text-primary">{branch.name}</CardTitle>
-                  <CardDescription>{branch.type}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="h-4 w-4 mt-1 text-muted-foreground" />
-                    <span className="text-sm">{branch.address}</span>
-                  </div>
-                  {/* <div className="flex items-center gap-3">
-                    <Phone className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">{branch.phone}</span>
-                  </div> */}
-                  <div className="flex items-center gap-3">
-                    <Navigation className="h-4 w-4 text-muted-foreground" />
-                    <a href={branch.mapUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">
-                      View on Google Maps
-                    </a>
-                  </div>
-                  <Button
-                    variant="default"
-                    className="w-full flex gap-2 items-center"
-                    onClick={() => window.open(branch.lineUrl, "_blank")}
-                  >
-                    <MessageCircle className="h-4 w-4" />
-                    Contact via LINE
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+      <main className="space-y-24 py-20">
+        <HeadOfficeSection />
       </main>
       <Footer />
     </div>
