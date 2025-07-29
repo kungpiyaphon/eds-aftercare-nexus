@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Navigation, MessageCircle } from "lucide-react";
 import HeadOfficeSection from "@/components/contact/HeadOfficeSection";
+import SamsungBranchesSection from "@/components/contact/SamsungBranchesSection";
 
 const samsungBranches = [
   {
@@ -95,6 +96,7 @@ const Contact = () => {
       <Header />
       <main className="space-y-24 py-20">
         <HeadOfficeSection />
+        <SamsungBranchesSection />
       </main>
       <Footer />
     </div>
