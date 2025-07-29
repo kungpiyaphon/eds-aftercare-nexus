@@ -33,7 +33,7 @@ const SmartHomeService = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div>
-            <h2 className="text-4xl font-bold text-primary mb-6">Smart Home Service</h2>
+            <h2 className="text-4xl font-bold text-primary mb-6">Smart Home Service Innovation</h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Transform your home into a smart, efficient, and secure living space with our comprehensive 
               smart home solutions. From installation to ongoing support, we handle everything.

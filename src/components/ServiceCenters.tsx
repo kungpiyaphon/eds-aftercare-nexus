@@ -156,7 +156,7 @@ const ServiceCenters = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">Service Centers</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4">Service Network Nationwide</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Find our service centers across Thailand for convenient support
           </p>

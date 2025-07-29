@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+# 🌐 EDS Company Website
 
-## Project info
+A modern, responsive, and fast-loading company website for **EDS**, developed using the latest frontend technologies. Originally scaffolded with [Lovable AI](https://lovable.dev), and continuously enhanced through custom development and best practices.
 
-**URL**: https://lovable.dev/projects/a7f6760a-8c0e-4df8-994a-9fb1d8740446
+> This project serves as both a real-world company website and a personal portfolio piece showcasing frontend engineering skills.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🔗 Project URL
 
-**Use Lovable**
+- **Live Website**: [https://demo-website-eds.vercel.app/](https://demo-website-eds.vercel.app/)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a7f6760a-8c0e-4df8-994a-9fb1d8740446) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📋 Table of Contents
 
-**Use your preferred IDE**
+- [🌐 EDS Company Website](#-eds-company-website)
+  - [🔗 Project URL](#-project-url)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [🧾 About the Project](#-about-the-project)
+  - [🧱 Tech Stack](#-tech-stack)
+  - [🚀 Getting Started](#-getting-started)
+    - [🔧 Prerequisites](#-prerequisites)
+    - [📥 Installation](#-installation)
+- [1. Clone the repository](#1-clone-the-repository)
+- [2. Install dependencies](#2-install-dependencies)
+- [3. Start development server](#3-start-development-server)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🧾 About the Project
 
-Follow these steps:
+This project is the official website for **EDS**, designed to represent the brand, showcase services, and enable contact with HR. It was initially generated using Lovable AI's boilerplate, but has been extensively customized by the developer to align with branding guidelines, accessibility best practices, and responsive UI/UX standards.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+---
+
+## 🧱 Tech Stack
+
+- ⚡️ [Vite](https://vitejs.dev/) – Lightning-fast build tool
+- ⚛️ [React](https://react.dev/) – Frontend library for building UI
+- ✨ [TypeScript](https://www.typescriptlang.org/) – Strongly typed JavaScript
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework
+- 🧩 [shadcn/ui](https://ui.shadcn.com/) – Accessible, beautiful component library
+- 💡 [Lovable.dev](https://lovable.dev) – AI-driven UI prototyping platform
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Prerequisites
+
+- Node.js (Recommended via [nvm](https://github.com/nvm-sh/nvm))
+- npm or yarn
+
+### 📥 Installation
+
+```bash
+# 1. Clone the repository
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 2. Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 3. Start development server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a7f6760a-8c0e-4df8-994a-9fb1d8740446) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

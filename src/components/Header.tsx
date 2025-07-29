@@ -40,10 +40,19 @@ const Header = () => {
         </nav>
 
         {/* Desktop Login */}
-        <Button variant="outline" className="hidden md:flex items-center gap-2">
-          <LogIn className="h-4 w-4" />
-          Login
-        </Button>
+        <a
+          href="https://my-note-app-frontend.vercel.app/login"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            variant="outline"
+            className="hidden md:flex items-center gap-2"
+          >
+            <LogIn className="h-4 w-4" />
+            Login
+          </Button>
+        </a>
 
         {/* Mobile Menu Button */}
         <Button
@@ -51,8 +60,18 @@ const Header = () => {
           className="md:hidden"
           onClick={() => setIsMobileMenuOpen(true)}
         >
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          <svg
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </Button>
       </div>
@@ -89,10 +108,16 @@ const Header = () => {
               {item.name}
             </Link>
           ))}
-          <Button variant="outline" className="mt-4 w-full">
-            <LogIn className="mr-2 h-4 w-4" />
-            Login
-          </Button>
+          <a
+            href="https://my-note-app-frontend.vercel.app/login"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" className="mt-4 w-full">
+              <LogIn className="mr-2 h-4 w-4" />
+              Login
+            </Button>
+          </a>
         </nav>
       </div>
     </header>
