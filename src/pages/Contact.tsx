@@ -5,6 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { MapPin, Phone, Navigation, MessageCircle } from "lucide-react";
 import HeadOfficeSection from "@/components/contact/HeadOfficeSection";
 import SamsungBranchesSection from "@/components/contact/SamsungBranchesSection";
+import SmartHomeSection from "@/components/contact/SmartHomeServiceSection";
+import SmartHomeServiceSection from "@/components/contact/SmartHomeServiceSection";
 
 const samsungBranches = [
   {
@@ -97,6 +99,7 @@ const Contact = () => {
       <main className="space-y-24 py-20">
         <HeadOfficeSection />
         <SamsungBranchesSection />
+        <SmartHomeServiceSection />
       </main>
       <Footer />
     </div>

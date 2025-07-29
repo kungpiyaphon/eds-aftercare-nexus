@@ -5,20 +5,20 @@ import { Button } from "@/components/ui/button";
 const headOffices = [
   {
     name: "EDS Headquarters",
-    type: "Smart Home Electronics (Head Office)",
+    type: "Electronics Data Source & Supply (Head Office)",
     address: "66 Soi Ananmai 39, 24 Srinagarindra Rd, Suan Luang, Bangkok 10250",
     mapUrl: "https://maps.app.goo.gl/m7TVFeEKAhGKB9GQ9",
     lineUrl: "https://lin.ee/LRZBpYn",
     img: "HQ"
   },
   {
-    name: "Xiaomi Flagship Service - Ayutthaya",
-    type: "Mobile & Multi Product Service",
-    address: "163/44 Moo 3, Phra Nakhon Si Ayutthaya District, Phra Nakhon Si Ayutthaya 13000",
+    name: "SHE Headquarters",
+    type: "Smarthome Electronics (Head Office)",
+    address: "66 Soi Ananmai 39, 24 Srinagarindra Rd, Suan Luang, Bangkok 10250",
     mapUrl: "https://maps.app.goo.gl/6GoiaPGt6gfEbork9",
     lineUrl: "https://lin.ee/LRZBpYn",
-    img: "XAY"
-  }
+    img: "SHE"
+  },
 ];
 
 const HeadOfficeSection = () => {
