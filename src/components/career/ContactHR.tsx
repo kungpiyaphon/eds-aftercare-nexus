@@ -12,7 +12,12 @@ export default function ContactHR() {
         <div className="flex flex-col items-center gap-2 mt-4">
           <div className="flex items-center gap-2 text-lg">
             <Mail className="h-5 w-5" />
-            <span className="">hr.recruit@eds.co.th</span>
+            <a
+              href="mailto:hr.recruit@eds.co.th?subject=Application for HR Position&body=Dear HR Team, ..."
+              className="hover:underline hover:text-primary transition-colors duration-200"
+              >
+              hr.recruit@eds.co.th
+            </a>
           </div>
         </div>
 
